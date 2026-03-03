@@ -1,0 +1,29 @@
+/*Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+
+Example 1:
+Input: x = 2.00000, n = 10
+Output: 1024.00000
+
+Example 2:
+Input: x = 2.10000, n = 3
+Output: 9.26100  */
+
+class Solution {
+public:
+    double myPow(double x, int n) {
+        long binform=n;
+        if(n<0){
+            x=1/x;
+            binform=-binform;
+        }
+        double ans=1;
+        while(binform>0){
+            if(binform%2==1){
+            ans*=x;
+            }
+        x*=x;
+        binform/=2;
+        }
+        return ans;
+    }
+};
