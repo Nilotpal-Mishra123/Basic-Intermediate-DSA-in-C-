@@ -13,6 +13,8 @@ Input: nums = [1,2,3,4,5], k = 2
 Output: 9
 Explanation: There are four ways to split nums into two subarrays.
 The best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9. */
+#include <vector>
+using namespace std;
 
 class Solution {
 public:
